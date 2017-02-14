@@ -1,2 +1,3 @@
 # Project-Python
-My name is Swordfish Pilot and I'm writing in this file because stuff.
+This is the start of a small story game.
+It will probably be the best thing you've ever played.
