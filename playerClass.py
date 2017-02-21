@@ -3,12 +3,14 @@ Our Player class that tracks the information of our player
 """
 
 class Player:
-	"""Player class that tracks agility, personality, sanity, strenght, and progress"""
-
+	"""
+	Player class that tracks agility, personality, sanity, strenght, and progress.
+	"""
+	
 	agility = 0
 	personality = 0
 	sanity = 0
-	strenght = 0
+	strength = 0
 	progress = 0
 
 
@@ -36,7 +38,7 @@ class Player:
 
 	def addPersonality(self):
 		"""
-		functions to add personality
+		function to add personality
 		"""
 		self.personality += 1
 		if self.personality > 10:
@@ -44,7 +46,7 @@ class Player:
 
 	def subPersonality(self):
 		"""
-		functions to subtract personality
+		function to subtract personality
 		"""
 		self.personality -= 1
 		if self.personality < -10:
@@ -53,7 +55,7 @@ class Player:
 
 	def addSanity(self):
 		"""
-		functions to add sanity
+		function to add sanity
 		"""
 		self.sanity += 1
 		if self.sanity > 10:
@@ -61,7 +63,7 @@ class Player:
 
 	def subSanity(self):
 		"""
-		functions to subtract sanity
+		function to subtract sanity
 		"""
 		self.sanity -= 1
 		if self.sanity < -10:
@@ -70,7 +72,7 @@ class Player:
 			
 	def addStrength(self):
 		"""
-		functions to add strength
+		function to add strength
 		"""
 		self.strength += 1
 		if self.strength > 10:
@@ -78,7 +80,7 @@ class Player:
 
 	def subStrength(self):
 		"""
-		functions to subtract strength
+		function to subtract strength
 		"""
 		self.strength -= 1
 		if self.strength < -10:
@@ -96,10 +98,11 @@ class Player:
 		"""
 		return current player stats in a list
 		"""
-		playerStats = ['Agility = ' + str(self.agility), 
+		playerStats = ['Name = ' + self.name, 
+					   'Agility = ' + str(self.agility), 
 					   'Personality = ' + str(self.personality), 
 					   'Sanity = ' + str(self.sanity), 
-					   'Strenght = ' + str(self.strenght), 
+					   'Strength = ' + str(self.strength), 
 					   'Progress = ' + str(self.progress)]
 		return playerStats
 		
