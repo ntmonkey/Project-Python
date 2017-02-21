@@ -1,22 +1,21 @@
 """
 Our Player class that tracks the information of our player
 """
+import json
 
 class Player:
 	"""
 	Player class that tracks agility, personality, sanity, strenght, and progress.
 	"""
-	
-	agility = 0
-	personality = 0
-	sanity = 0
-	strength = 0
-	progress = 0
-
 
 	def __init__(self, name):
 		"""The constructor"""
-		self.name = name
+		self.name = name	
+		self.agility = 0
+		self.personality = 0
+		self.sanity = 0
+		self.strength = 0
+		self.progress = 0
 
 		
 	def addAgility(self):
@@ -92,9 +91,22 @@ class Player:
 		set story progress as an integer
 		"""
 		self.progress = prog
-		
-	
+
+
 	def returnPlayerStats(self):
+		"""
+		return current player stats in a list
+		"""
+		playerStats = [self.name, 
+					   self.agility, 
+					   self.personality, 
+					   self.sanity, 
+					   self.strength, 
+					   self.progress]
+		return playerStats		
+	
+	
+	def printPlayerStats(self):
 		"""
 		return current player stats in a list
 		"""
@@ -104,7 +116,16 @@ class Player:
 					   'Sanity = ' + str(self.sanity), 
 					   'Strength = ' + str(self.strength), 
 					   'Progress = ' + str(self.progress)]
-		return playerStats
+		print playerStats
+		
+		
+	def savePlayerStats(self):
+		file = open(self.name + 'SaveGame', 'w')
+		x = self.returnPlayerStats()
+		json.dump(x, file)
+		file.close()
+		
+
 		
 
 
