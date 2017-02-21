@@ -3,7 +3,7 @@ class Player:
 	agility = 0
 	personality = 0
 	sanity = 0
-	strenght = 0
+	strength = 0
 	progress = 0
 
 
