@@ -125,6 +125,19 @@ class Player:
 		json.dump(x, file)
 		file.close()
 		
+		
+	def loadPlayerStats(self):
+		file = open(self.name + 'SaveGame', 'r')
+		x = json.load(file)
+		self.name = x[0]
+		self.agility = x[1]
+		self.personality = x[2]
+		self.sanity = x[3]
+		self.strength = x[4]
+		self.progress = x[5]
+		
+		print("Load Successful!")
+		
 
 		
 
